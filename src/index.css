@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cal+Sans&family=Charm:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sacramento&display=swap");
+
+@import "tailwindcss";
+
+/* Font lokal */
+@font-face {
+  font-family: "Adelio-Darmanto";
+  src: url("/assets/font/Adelio-Darmanto.otf") format("opentype");
+}
+@font-face {
+  font-family: "Breathing";
+  src: url("/assets/font/Breathing.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GavolineDemo";
+  src: url("/assets/font/GavolineDemo.otf") format("truetype");
+}
+
+/* index.css atau tailwind.css */
+body,
+#root {
+  background-color: #8dafc7;
+  color: #f4f6f7; /* opsional */
+}
+
+@theme {
+  --font-adelio-darmanto: "Adelio-Darmanto", sans-serif;
+  --font-breathing: "Breathing", sans-serif;
+  --font-gavolinedemo: "GavolineDemo", sans-serif;
+  --font-raleway: "Raleway", sans-serif;
+  --font-sacramento: "Sacramento", sans-serif;
+  --font-cal-sans: "Cal-Sans", "serif";
+  --font-akaya-kanadaka: "Akaya-Kanadaka", sans-serif;
+  --font-bodoni-moda: "Bodoni-Moda", sans-serif;
+  --font-playfair-display: "Playfair-Display", sans-serif;
+  --font-charm: "Charm", sans-serif;
+  --color-primary: #51504e;
+  --color-secondary: #868483;
+  --color-neutral: #e2e2de;
+  --color-accent: #f4f6f7;
+  --color-disco: #b8bbbf;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Tambahkan di Tailwind config atau CSS biasa */
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+  -webkit-animation: scroll 30s linear infinite;
+}
