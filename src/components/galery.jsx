@@ -80,7 +80,7 @@ const Gallery = () => {
         {/* Kolom Kiri */}
         <div>
           <img
-            src={`/src/assets/image/${images[indexes[0]]}`}
+            src={`assets/image/${images[indexes[0]]}`}
             alt="Gallery 1"
             className={`w-full h-96 object-cover rounded-xl shadow-md transition-opacity duration-800 ${
               fadeStates[0] ? "opacity-100" : "opacity-0"
@@ -91,14 +91,14 @@ const Gallery = () => {
         {/* Kolom Kanan Baris 1 */}
         <div className="grid grid-cols-2 gap-4">
           <img
-            src={`/src/assets/image/${images[indexes[1]]}`}
+            src={`assets/image/${images[indexes[1]]}`}
             alt="Gallery 2"
             className={`w-full h-64 object-cover rounded-xl shadow-md transition-opacity duration-800 ${
               fadeStates[1] ? "opacity-100" : "opacity-0"
             }`}
           />
           <img
-            src={`/src/assets/image/${images[indexes[2]]}`}
+            src={`assets/image/${images[indexes[2]]}`}
             alt="Gallery 3"
             className={`w-full h-64 object-cover rounded-xl shadow-md transition-opacity duration-800 ${
               fadeStates[2] ? "opacity-100" : "opacity-0"
@@ -109,14 +109,14 @@ const Gallery = () => {
         {/* Kolom Kanan Baris 2 */}
         <div className="grid grid-cols-2 gap-4">
           <img
-            src={`/src/assets/image/${images[indexes[3]]}`}
+            src={`assets/image/${images[indexes[3]]}`}
             alt="Gallery 4"
             className={`w-full h-64 object-cover rounded-xl shadow-md transition-opacity duration-800 ${
               fadeStates[3] ? "opacity-100" : "opacity-0"
             }`}
           />
           <img
-            src={`/src/assets/image/${images[indexes[4]]}`}
+            src={`assets/image/${images[indexes[4]]}`}
             alt="Gallery 5"
             className={`w-full h-64 object-cover rounded-xl shadow-md transition-opacity duration-800 ${
               fadeStates[4] ? "opacity-100" : "opacity-0"

@@ -1,10 +1,5 @@
 import { useEffect } from "react";
-import galery1 from "../assets/image/gallery-1.jpeg";
-import galery2 from "../assets/image/gallery-2.jpeg";
-import galery3 from "../assets/image/gallery-3.jpeg";
-import galery4 from "../assets/image/gallery-4.jpeg";
-import galery5 from "../assets/image/gallery-5.jpeg";
-import galery6 from "../assets/image/gallery-6.jpeg";
+
 import Marquee from "react-fast-marquee";
 import Bride from "./bride";
 import Arrum from "./arrum";
@@ -24,12 +19,12 @@ import WishPage from "./wish/wishPage";
 
 function FirstPage() {
   const galerys = [
-    { galery: galery1 },
-    { galery: galery2 },
-    { galery: galery3 },
-    { galery: galery4 },
-    { galery: galery5 },
-    { galery: galery6 },
+    { galery: "/assets/image/gallery-1.jpeg" },
+    { galery: "/assets/image/gallery-2.jpeg" },
+    { galery: "/assets/image/gallery-3.jpeg" },
+    { galery: "/assets/image/gallery-4.jpeg" },
+    { galery: "/assets/image/gallery-5.jpeg" },
+    { galery: "/assets/image/gallery-6.jpeg" },
   ];
 
   const scrollToSection = (id) => {
@@ -131,7 +126,7 @@ function FirstPage() {
         </motion.div>
 
         <BottomNavbar onNavigate={scrollToSection} />
-        <MusicPlayer />
+        {/* <MusicPlayer /> */}
       </div>
     </AnimatedPage>
   );

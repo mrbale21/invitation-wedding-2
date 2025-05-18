@@ -1,3 +1,6 @@
+import zigzag1 from "../assets/image/zigzag1.png";
+import zigzag2 from "../assets/image/zigzag2.png";
+
 const LoveStory = () => {
   return (
     <div className="p-4">
@@ -16,11 +19,11 @@ const LoveStory = () => {
           {/* Zigzag Image */}
           <img
             src="/src/assets/image/zigzag1.png"
-            alt="Zigzag"
+            alt={zigzag1}
             className="h-[400px] object-contain z-10"
           />
           <img
-            src="/src/assets/image/zigzag2.png"
+            src={zigzag2}
             alt="Zigzag"
             className="h-[400px] object-contain z-10"
           />

@@ -19,8 +19,8 @@
 /* index.css atau tailwind.css */
 body,
 #root {
-  background-color: #8dafc7;
-  color: #f4f6f7; /* opsional */
+  background-color: #f4f6f7;
+  color: #51504e; /* opsional */
 }
 
 @theme {
