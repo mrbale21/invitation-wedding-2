@@ -131,7 +131,7 @@ function FirstPage() {
         </motion.div>
 
         <BottomNavbar onNavigate={scrollToSection} />
-        {/* <MusicPlayer /> */}
+        <MusicPlayer />
       </div>
     </AnimatedPage>
   );
