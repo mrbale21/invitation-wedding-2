@@ -1,40 +1,28 @@
-import { useEffect, lazy, Suspense } from "react";
-import Marquee from "react-fast-marquee";
+import { useEffect, useState, lazy, Suspense } from "react";
 import Bride from "./bride";
 import Arrum from "./arrum";
 import Wedding from "./wedding";
 import Footer from "./footer";
 import BottomNavbar from "./bottomNavbar";
-import MusicPlayer from "./musicPlayer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import AnimatedPage from "./animatedPage";
 import { motion } from "framer-motion";
 import SpecialDay from "./specialDay";
 import LoveStory from "./loveStory";
-import bgfirst from "../assets/image/bg-first.webp";
+import bg1 from "../assets/image/bg-first.webp";
+import bg2 from "../assets/image/bg-wedding.webp";
+import bg3 from "../assets/image/bg-story.webp";
 
 // Lazy-load komponen berat
 const Galery = lazy(() => import("./galery"));
 const Gift = lazy(() => import("./gift"));
 const WishPage = lazy(() => import("./wish/wishPage"));
 
-function FirstPage() {
-  const galerys = [
-    { galery: "/assets/image/gallery-1.webp" },
-    { galery: "/assets/image/gallery-2.webp" },
-    { galery: "/assets/image/gallery-3.webp" },
-    { galery: "/assets/image/gallery-4.webp" },
-    { galery: "/assets/image/gallery-5.webp" },
-    { galery: "/assets/image/gallery-6.webp" },
-  ];
+const bgImages = [bg1, bg2, bg3];
 
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+function FirstPage() {
+  const [currentBg, setCurrentBg] = useState(0);
 
   useEffect(() => {
     AOS.init({
@@ -45,6 +33,21 @@ function FirstPage() {
     AOS.refresh();
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentBg((prev) => (prev + 1) % bgImages.length);
+    }, 5000); // ganti gambar tiap 5 detik
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <AnimatedPage>
       <div className="min-h-screen w-full overflow-hidden bg-primary text-accent border-none">
@@ -54,15 +57,15 @@ function FirstPage() {
           transition={{ duration: 0.5 }}
           className="w-full max-w-md min-h-screen mx-auto bg-accent bg-opacity-90 flex flex-col items-center"
         >
-          {/* Gambar Header */}
+          {/* Gambar Header dengan Carousel */}
           <div className="relative w-full h-[480px] overflow-hidden flex items-end justify-center">
             <img
-              src={bgfirst}
+              src={bgImages[currentBg]}
               alt="Background"
               loading="lazy"
               decoding="async"
               fetchpriority="low"
-              className="absolute inset-0 w-full h-full object-cover object-center"
+              className="absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-secondary z-10" />
             <div className="relative z-20 text-center mb-10 px-4">
@@ -82,29 +85,6 @@ function FirstPage() {
                 14.06.2025
               </h5>
             </div>
-          </div>
-
-          {/* Galeri Marquee */}
-          <div className="hide-scrollbar w-full bg-secondary border-none py-1">
-            <Marquee speed={25} pauseOnHover gradient={false}>
-              <div className="flex gap-2 px-2">
-                {galerys.map((data, index) => (
-                  <div
-                    key={index}
-                    className="h-28 w-28 flex-shrink-0 rounded overflow-hidden"
-                  >
-                    <img
-                      src={data.galery}
-                      alt={`gallery-${index}`}
-                      loading="lazy"
-                      decoding="async"
-                      fetchpriority="low"
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
-            </Marquee>
           </div>
 
           {/* Sections */}
@@ -163,7 +143,6 @@ function FirstPage() {
         </motion.div>
 
         <BottomNavbar onNavigate={scrollToSection} />
-        {/* <MusicPlayer /> */}
       </div>
     </AnimatedPage>
   );

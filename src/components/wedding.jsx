@@ -31,7 +31,7 @@ function Wedding() {
               </h1>
 
               <div className="flex justify-center items-center h-28 my-4">
-                <h1 className="font-charm text-2xl font-semibold">JULI</h1>
+                <h1 className="font-charm text-xl font-semibold">JULI</h1>
                 <div className="h-full w-0.5 bg-gray-400 mx-4" />
                 <div className="flex flex-col px-4 gap-2">
                   <h2 className="font-charm text-xl font-semibold">Minggu</h2>
@@ -41,14 +41,14 @@ function Wedding() {
                   <h5 className="font-cal-sans text-xs">09.000 WIB</h5>
                 </div>
                 <div className="h-full w-0.5 bg-gray-400 mx-4" />
-                <h2 className="font-cal-sans text-2xl font-semibold">2025</h2>
+                <h2 className="font-cal-sans text-xl font-semibold">2025</h2>
               </div>
               <div className="font-cal-sans text-sm flex flex-col justify-center items-center">
                 <h2>Alamat :</h2>
                 <p>Kediaman Mempelai Pria</p>
                 <p className="text-[10px]">
-                  Kp. Hambalang RT 08/03, Desa Hambalang, Kec. Citeureup, Kab.
-                  Bogor
+                  Kp. Hambalang RT 08/03, Desa Hambalang, <br /> Kec. Citeureup,
+                  Kab. Bogor
                 </p>
                 <button className="flex justify-center items-center text-sm font-cal-sans p-1 px-2 bg-primary text-accent hover:border rounded-lg gap-2 w-32 mt-4">
                   <FaMapLocation /> <p>Open Map</p>
@@ -68,7 +68,7 @@ function Wedding() {
               </h1>
 
               <div className="flex justify-center items-center h-28 my-4">
-                <h1 className="font-charm text-2xl font-semibold">JULI</h1>
+                <h1 className="font-charm text-xl font-semibold">JULI</h1>
                 <div className="h-full w-0.5 bg-gray-400 mx-4" />
                 <div className="flex flex-col px-4 gap-2">
                   <h2 className="font-charm text-xl font-semibold">Minggu</h2>
@@ -78,7 +78,7 @@ function Wedding() {
                   <h5 className="font-cal-sans text-xs">09.000 WIB</h5>
                 </div>
                 <div className="h-full w-0.5 bg-gray-400 mx-4" />
-                <h2 className="font-cal-sans text-2xl font-semibold">2025</h2>
+                <h2 className="font-cal-sans text-xl font-semibold">2025</h2>
               </div>
               <div className="font-cal-sans text-sm flex flex-col justify-center items-center">
                 <h2>Alamat :</h2>

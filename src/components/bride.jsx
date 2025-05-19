@@ -23,7 +23,7 @@ function Bride() {
                 className="bg-[url(assets/image/pria.jpg)] h-[220px] w-[160px] bg-cover bg-center flex justify-start items-end rounded-lg border-2 border-primary"
               >
                 <h1 className="flex font-breathing text-accent text-xl p-1">
-                  {["I", "L", "H", "A", "M"].map((char, index) => (
+                  {["A", "H", "M", "A", "D"].map((char, index) => (
                     <span
                       key={index}
                       data-aos="fade-left"
@@ -40,14 +40,14 @@ function Bride() {
                 data-aos="fade-left"
                 className="font-poppins text-xl text-black font-semibold"
               >
-                Ramadhan Ilham
+                Ahmad Laelatulloh
               </h1>
               <p
                 data-aos="fade-left"
                 className="text-center text-black text-[12px]"
               >
-                Putra kedua dari Bapak K.H. Pahrudin & <br />
-                Ibu Siti Aminah
+                Putra kedua dari Bapak .... & <br />
+                Ibu ...
               </p>
               <button
                 data-aos="zoom-in"
@@ -79,17 +79,15 @@ function Bride() {
                 className="bg-[url(assets/image/wanita.jpg)] h-[220px] w-[160px] bg-cover bg-center flex justify-start items-end rounded-lg border-2 border-primary"
               >
                 <h1 className="flex font-breathing text-accent text-xl p-1">
-                  {["S", "y", "a", "r", "i", "f", "a", "h"].map(
-                    (char, index) => (
-                      <span
-                        key={index}
-                        data-aos="fade-right"
-                        data-aos-delay={index * 150}
-                      >
-                        {char}
-                      </span>
-                    )
-                  )}
+                  {["N", "A", "V", "I", "S", "A"].map((char, index) => (
+                    <span
+                      key={index}
+                      data-aos="fade-right"
+                      data-aos-delay={index * 150}
+                    >
+                      {char}
+                    </span>
+                  ))}
                 </h1>
               </div>
             </div>
@@ -98,14 +96,14 @@ function Bride() {
                 data-aos="fade-right"
                 className="font-poppins text-xl text-black font-semibold"
               >
-                Siti Syarifah Putria Azzahra
+                Navisa
               </h1>
               <p
                 data-aos="fade-right"
                 className="text-center text-[12px] text-black"
               >
-                Putri kedua dari Bapak K.H. Iip Abdul Gofar & <br />
-                Ibu Iis Suryani
+                Putri kedua dari Bapak Mustofa & <br />
+                Ibu Suaebah
               </p>
               <button
                 data-aos="zoom-in"

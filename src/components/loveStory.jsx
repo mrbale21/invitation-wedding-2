@@ -20,15 +20,15 @@ const LoveStory = () => {
           <img
             src={zigzag1}
             alt="zigzag"
-            className="h-[400px] object-contain z-10"
+            className="h-[350px] object-contain z-10"
           />
           <img
             src={zigzag2}
             alt="Zigzag"
-            className="h-[400px] object-contain z-10"
+            className="h-[350px] object-contain z-10"
           />
           <div className="text-center text-secondary">
-            <div className="absolute top-[40px] -left-3 w-1/2 px-1 font-akaya-kanadaka text-center">
+            <div className="absolute top-[40px] -left-0 w-1/2 px-1 font-akaya-kanadaka text-center">
               <div className="bg-[url(assets/image/box-story.png)] bg-cover bg-no-repeat bg-center w-full p-7 sm:p-9 text-[8px] ">
                 <h2 className="font-bold my-1 text-center text-sm">
                   Awal Bertemu
@@ -42,7 +42,7 @@ const LoveStory = () => {
             </div>
 
             {/* Konten kanan */}
-            <div className="absolute top-[160px] -right-3 w-1/2 px-1 text-center">
+            <div className="absolute top-[130px] -right-0 w-1/2 px-1 text-center">
               <div className="bg-[url(assets/image/box-story.png)] bg-cover bg-no-repeat bg-center w-full p-7 sm:p-9 max-w-sm ml-auto text-[9px] ">
                 <h2 className="font-bold text-center text-xs my-1">
                   Perjalanan Bersama
@@ -55,7 +55,7 @@ const LoveStory = () => {
             </div>
 
             {/* Konten kiri lagi */}
-            <div className="absolute top-[300px] -left-3 w-1/2 px-1 text-center">
+            <div className="absolute top-[260px] -left-0 w-1/2 px-1 text-center">
               <div className="bg-[url(assets/image/box-story.png)] bg-cover bg-no-repeat bg-center w-full p-7 sm:p-9 max-w-sm ml-auto text-[9px]">
                 <h2 className="text-sm font-bold my-1">Komitmen</h2>
                 <p className="mb-2">
