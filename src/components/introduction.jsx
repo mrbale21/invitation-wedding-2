@@ -22,7 +22,7 @@ function Introduction() {
             initial={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.5 }}
-            className="relative flex flex-col py-37 justify-between items-center h-full w-96 bg-[url(assets/image/bg-intro4.jpeg)] bg-cover bg-center"
+            className="relative flex flex-col py-37 justify-between items-center h-full w-96 bg-[url(assets/image/bg-intro.webp)] bg-cover bg-center"
           >
             <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/70 z-0" />
             <div className="z-10 py-2 flex flex-col justify-between items-center">

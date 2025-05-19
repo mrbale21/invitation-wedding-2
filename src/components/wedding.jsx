@@ -3,7 +3,7 @@ import { FaMapLocation } from "react-icons/fa6";
 function Wedding() {
   return (
     <>
-      <div className=" h-[950px] w-full pt-18 bg-[url(assets/image/bg-wedding.jpeg)] bg-fixed bg-cover bg-no-repeat bg-center text-secondary">
+      <div className=" min-h-screen w-full pt-18 pb-8 bg-[url(assets/image/bg-wedding.webp)] bg-fixed bg-cover bg-no-repeat bg-center text-secondary">
         <div className="pt-2 px-6">
           <div className="min-w-full h-[820px] bg-accent shadow shadow-black border border-secondary rounded-t-full grid place-items-center pb-2">
             {/* respsei */}

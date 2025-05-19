@@ -1,10 +1,8 @@
-import { useEffect } from "react";
-
+import { useEffect, lazy, Suspense } from "react";
 import Marquee from "react-fast-marquee";
 import Bride from "./bride";
 import Arrum from "./arrum";
 import Wedding from "./wedding";
-import Gift from "./gift";
 import Footer from "./footer";
 import BottomNavbar from "./bottomNavbar";
 import MusicPlayer from "./musicPlayer";
@@ -13,18 +11,22 @@ import "aos/dist/aos.css";
 import AnimatedPage from "./animatedPage";
 import { motion } from "framer-motion";
 import SpecialDay from "./specialDay";
-import Galery from "./galery";
 import LoveStory from "./loveStory";
-import WishPage from "./wish/wishPage";
+import bgfirst from "../assets/image/bg-first.webp";
+
+// Lazy-load komponen berat
+const Galery = lazy(() => import("./galery"));
+const Gift = lazy(() => import("./gift"));
+const WishPage = lazy(() => import("./wish/wishPage"));
 
 function FirstPage() {
   const galerys = [
-    { galery: "/assets/image/gallery-1.jpeg" },
-    { galery: "/assets/image/gallery-2.jpeg" },
-    { galery: "/assets/image/gallery-3.jpeg" },
-    { galery: "/assets/image/gallery-4.jpeg" },
-    { galery: "/assets/image/gallery-5.jpeg" },
-    { galery: "/assets/image/gallery-6.jpeg" },
+    { galery: "/assets/image/gallery-1.webp" },
+    { galery: "/assets/image/gallery-2.webp" },
+    { galery: "/assets/image/gallery-3.webp" },
+    { galery: "/assets/image/gallery-4.webp" },
+    { galery: "/assets/image/gallery-5.webp" },
+    { galery: "/assets/image/gallery-6.webp" },
   ];
 
   const scrollToSection = (id) => {
@@ -35,23 +37,35 @@ function FirstPage() {
   };
 
   useEffect(() => {
-    AOS.init({ duration: 1000, offset: 100, easing: "ease-in-out" });
+    AOS.init({
+      duration: 800,
+      offset: 100,
+      once: true,
+    });
     AOS.refresh();
   }, []);
 
   return (
     <AnimatedPage>
-      <div className="min-h-screen w-full overflow-hidden bg-primary bg-fit text-accent border-none">
+      <div className="min-h-screen w-full overflow-hidden bg-primary text-accent border-none">
         <motion.div
           initial={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.95 }}
           transition={{ duration: 0.5 }}
-          className="w-full max-w-md min-h-screen mx-auto bg-accent bg-opacity-80 flex flex-col items-center"
+          className="w-full max-w-md min-h-screen mx-auto bg-accent bg-opacity-90 flex flex-col items-center"
         >
-          {/* Header Image with Overlay */}
-          <div className="relative w-full h-[520px] bg-[url(assets/image/bg-intro2.jpeg)] bg-center bg-no-repeat bg-cover flex items-end justify-center">
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-secondary z-0" />
-            <div className="relative z-10 text-center mb-10 px-4">
+          {/* Gambar Header */}
+          <div className="relative w-full h-[480px] overflow-hidden flex items-end justify-center">
+            <img
+              src={bgfirst}
+              alt="Background"
+              loading="lazy"
+              decoding="async"
+              fetchpriority="low"
+              className="absolute inset-0 w-full h-full object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-secondary z-10" />
+            <div className="relative z-20 text-center mb-10 px-4">
               <h1
                 data-aos="fade-up"
                 className="text-xl font-cal-sans text-accent"
@@ -71,15 +85,21 @@ function FirstPage() {
           </div>
 
           {/* Galeri Marquee */}
-          <div className="hide-scrollbar w-full bg-secondary m-0 p-0 border-none">
-            <Marquee speed={20} pauseOnHover gradient={false}>
-              <div className="flex gap-2">
+          <div className="hide-scrollbar w-full bg-secondary border-none py-1">
+            <Marquee speed={25} pauseOnHover gradient={false}>
+              <div className="flex gap-2 px-2">
                 {galerys.map((data, index) => (
-                  <div key={index} className="h-35 w-30 flex-shrink-0">
+                  <div
+                    key={index}
+                    className="h-28 w-28 flex-shrink-0 rounded overflow-hidden"
+                  >
                     <img
                       src={data.galery}
                       alt={`gallery-${index}`}
-                      className="h-full w-full object-cover rounded"
+                      loading="lazy"
+                      decoding="async"
+                      fetchpriority="low"
+                      className="h-full w-full object-cover"
                     />
                   </div>
                 ))}
@@ -108,16 +128,33 @@ function FirstPage() {
             <Wedding />
           </div>
 
+          {/* Lazy Components */}
           <div id="galery" className="w-full">
-            <Galery />
+            <Suspense
+              fallback={
+                <div className="text-center py-4">Memuat galeri...</div>
+              }
+            >
+              <Galery />
+            </Suspense>
           </div>
 
           <div id="gift" className="w-full">
-            <Gift />
+            <Suspense
+              fallback={<div className="text-center py-4">Memuat gift...</div>}
+            >
+              <Gift />
+            </Suspense>
           </div>
 
           <div id="wish" className="w-full">
-            <WishPage />
+            <Suspense
+              fallback={
+                <div className="text-center py-4">Memuat ucapan...</div>
+              }
+            >
+              <WishPage />
+            </Suspense>
           </div>
 
           <div className="w-full">

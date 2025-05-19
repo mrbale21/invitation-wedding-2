@@ -10,7 +10,7 @@ const LoveStory = () => {
 
       <div className="bg-secondary relative h-[775px] overflow-hidden border-none rounded-xl">
         {/* Background */}
-        <div className="relative bg-[url(assets/image/bg-story.jpeg)] h-[300px] bg-cover bg-center">
+        <div className="relative bg-[url(assets/image/bg-story.webp)] h-[300px] bg-cover bg-top">
           <div className="absolute -inset-1 bg-gradient-to-b from-transparent to-secondary"></div>
         </div>
 
@@ -18,8 +18,8 @@ const LoveStory = () => {
         <div className="relative flex flex-col items-center pt-6">
           {/* Zigzag Image */}
           <img
-            src="/src/assets/image/zigzag1.png"
-            alt={zigzag1}
+            src={zigzag1}
+            alt="zigzag"
             className="h-[400px] object-contain z-10"
           />
           <img

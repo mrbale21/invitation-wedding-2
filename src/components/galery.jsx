@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 
 const images = [
-  "gallery-1.jpeg",
-  "gallery-2.jpeg",
-  "gallery-3.jpeg",
-  "gallery-4.jpeg",
-  "gallery-5.jpeg",
-  "gallery-6.jpeg",
-  "gallery-7.jpeg",
-  "gallery-8.jpeg",
+  "gallery-1.webp",
+  "gallery-2.webp",
+  "gallery-3.webp",
+  "gallery-4.webp",
+  "gallery-5.webp",
+  "gallery-6.webp",
+  "gallery-7.webp",
+  "gallery-8.webp",
 ];
 
 const preloadImages = () => {
@@ -82,6 +82,7 @@ const Gallery = () => {
           <img
             src={`assets/image/${images[indexes[0]]}`}
             alt="Gallery 1"
+            loading="lazy"
             className={`w-full h-96 object-cover rounded-xl shadow-md transition-opacity duration-800 ${
               fadeStates[0] ? "opacity-100" : "opacity-0"
             }`}
