@@ -28,9 +28,9 @@ const LoveStory = () => {
             className="h-[350px] object-contain z-10"
           />
           <div className="text-center text-secondary">
-            <div className="absolute top-[40px] -left-0 w-1/2 px-1 font-akaya-kanadaka text-center">
-              <div className="bg-[url(assets/image/box-story.png)] bg-cover bg-no-repeat bg-center w-full p-7 sm:p-9 text-[8px] ">
-                <h2 className="font-bold my-1 text-center text-sm">
+            <div className="absolute top-[40px] -left-2 w-1/2 px-0.5 font-akaya-kanadaka text-center">
+              <div className="bg-[url(assets/image/box-story.png)] bg-cover bg-no-repeat bg-center w-full h-35 p-7 sm:p-9 text-[8px] ">
+                <h2 className="font-bold my-1 text-center text-xs">
                   Awal Bertemu
                 </h2>
                 <p className="mb-1">
@@ -42,12 +42,12 @@ const LoveStory = () => {
             </div>
 
             {/* Konten kanan */}
-            <div className="absolute top-[130px] -right-0 w-1/2 px-1 text-center">
-              <div className="bg-[url(assets/image/box-story.png)] bg-cover bg-no-repeat bg-center w-full p-7 sm:p-9 max-w-sm ml-auto text-[9px] ">
-                <h2 className="font-bold text-center text-xs my-1">
+            <div className="absolute top-[130px] -right-1 w-1/2 px-0.5 text-center">
+              <div className="bg-[url(assets/image/box-story.png)] bg-cover bg-no-repeat bg-center h-35 w-full p-7 sm:p-9 ml-auto text-[9px] ">
+                <h2 className="font-bold text-center text-[11px] my-1">
                   Perjalanan Bersama
                 </h2>
-                <p className="mb-2">
+                <p className="mb-2 text-[8px]">
                   Dari jalan-jalan sore hingga merancang masa depan, semua momen
                   terasa lebih berarti saat dilalui bersama.
                 </p>
@@ -55,9 +55,9 @@ const LoveStory = () => {
             </div>
 
             {/* Konten kiri lagi */}
-            <div className="absolute top-[260px] -left-0 w-1/2 px-1 text-center">
-              <div className="bg-[url(assets/image/box-story.png)] bg-cover bg-no-repeat bg-center w-full p-7 sm:p-9 max-w-sm ml-auto text-[9px]">
-                <h2 className="text-sm font-bold my-1">Komitmen</h2>
+            <div className="absolute top-[260px] -left-0 w-1/2 px-0.5 text-center">
+              <div className="bg-[url(assets/image/box-story.png)] bg-cover bg-no-repeat bg-center w-full h-35 p-7 sm:p-9 ml-auto text-[8px]">
+                <h2 className="font-bold my-1 text-xs">Komitmen</h2>
                 <p className="mb-2">
                   Cinta kami tumbuh perlahan, tapi pasti. Kini, kami yakin untuk
                   melangkah ke tahap selanjutnya bersama.
