@@ -5,7 +5,11 @@ import "aos/dist/aos.css";
 function Arrum() {
   return (
     <div className="grid place-items-center place-content-start h-72 w-full max-w-md bg-secondary">
-      <div className="bg-[url(assets/image/bunga.png)] bg-cover bg-center w-23 h-23 my-6"></div>
+      <div
+        data-aos="zoom-in"
+        data-aos-delay="100"
+        className="bg-[url(assets/image/bunga.png)] bg-cover bg-center w-23 h-23 my-6"
+      ></div>
       <p
         data-aos="fade-up"
         className="text-[11px] font-charm px-4 text-center text-white z-10"

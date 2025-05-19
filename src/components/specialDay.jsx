@@ -36,7 +36,7 @@ function SpecialDay({ targetDate }) {
 
   return (
     <>
-      <div className="h-72 w-full bg-secondary text-accent">
+      <div className="h-72 w-full bg-secondary text-primary">
         <div className="flex flex-col justify-start items-center">
           <div className="flex pt-10 font-cal-sans text-6xl relative">
             <div className="flex gap-4">
@@ -47,7 +47,7 @@ function SpecialDay({ targetDate }) {
                 N
               </h1>
             </div>
-            <div className="absolute left-3/6 top-0 mt-8 h-20 w-px bg-accent"></div>
+            <div className="absolute left-3/6 top-0 mt-8 h-20 w-px bg-primary"></div>
           </div>
           <div
             data-aos="fade-up"
@@ -57,7 +57,7 @@ function SpecialDay({ targetDate }) {
             <h4 className="font-adelio-darmanto text-3xl text-accent pb-4 pt-6">
               Our Special Day
             </h4>
-            <div className="flex gap-13 items-center text-accent ">
+            <div className="flex gap-10 items-center text-accent ">
               <div
                 data-aos="fade-right"
                 className="flex flex-col justify-center items-center font-raleway z-10"

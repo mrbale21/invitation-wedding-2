@@ -86,7 +86,10 @@ const Gallery = () => {
 
   return (
     <div className="p-4 space-y-6 max-w-screen-md mx-auto">
-      <h1 className="text-primary grid place-items-center font-sacramento text-4xl font-semibold pt-8">
+      <h1
+        data-aos="zoom-in"
+        className="text-primary grid place-items-center font-sacramento text-4xl font-semibold pt-8"
+      >
         Our gallery
       </h1>
 

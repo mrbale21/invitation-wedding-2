@@ -96,13 +96,23 @@ const WishPage = () => {
       <MessagePopup message={message} />
       <div className="max-w-full w-[370px] bg-accent mt-2 rounded-lg shadow-lg shadow-primary">
         <div className="flex flex-col items-center text-primary">
-          <h1 className="font-sacramento text-4xl pt-6">Doa & Ucapan</h1>
-          <p className="font-cal-sans capitalize text-sm">
+          <h1
+            data-aos="zoom-in"
+            data-aos-delay="400"
+            className="font-sacramento text-4xl pt-6 font-semibold"
+          >
+            Doa & Ucapan
+          </h1>
+          <p
+            data-aos="zoom-in"
+            data-aos-delay="600"
+            className="font-cal-sans capitalize text-sm"
+          >
             Kirimkan ucapan dan doa restu kami
           </p>
         </div>
 
-        <div className="p-4">
+        <div data-aos="fade-up" data-aos-delay="400" className="p-4">
           <div className="max-w-sm w-full min-h-[800px] bg-primary text-accent border border-accent rounded-md flex flex-col justify-between">
             <div className="flex flex-col justify-center items-center py-3 font-semibold">
               <h3>{wishesList.length} Comments</h3>

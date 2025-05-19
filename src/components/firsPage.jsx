@@ -28,7 +28,6 @@ function FirstPage() {
     AOS.init({
       duration: 800,
       offset: 100,
-      once: true,
     });
     AOS.refresh();
   }, []);
@@ -77,7 +76,7 @@ function FirstPage() {
               </h1>
               <h3
                 data-aos="fade-up"
-                className="font-breathing text-2xl font-medium text-accent"
+                className="font-breathing text-2xl font-medium text-neutral"
               >
                 Ahmad & Navisa
               </h3>

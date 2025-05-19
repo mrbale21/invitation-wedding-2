@@ -5,7 +5,11 @@ function Bride() {
     <>
       <div className="h-[950px] w-full max-w-md bg-accent">
         {/* Mempelai Pria */}
-        <div className="grid place-items-center pt-6">
+        <div
+          data-aos="zoom-in"
+          data-aos-delay="100"
+          className="grid place-items-center pt-6"
+        >
           <h2 className="font-sacramento font-semibold text-2xl text-primary">
             Assalamualaikum Wr. Wb
           </h2>

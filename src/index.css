@@ -72,3 +72,17 @@ body,
   animation: scroll 30s linear infinite;
   -webkit-animation: scroll 30s linear infinite;
 }
+
+@keyframes revealDown {
+  0% {
+    clip-path: inset(0 0 100% 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.animate-revealDown {
+  animation: revealDown 6s ease-out forwards;
+  -webkit-animation: revealDown 6s ease-out forwards;
+}
