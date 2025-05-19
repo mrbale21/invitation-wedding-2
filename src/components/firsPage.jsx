@@ -50,7 +50,7 @@ function FirstPage() {
 
   return (
     <AnimatedPage>
-      <div className="min-h-screen w-full overflow-hidden bg-primary text-accent border-none">
+      <div className="min-h-screen w-full overflow-hidden bg-primary text-accent  p-0 m-0 border-none">
         <motion.div
           initial={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.95 }}
