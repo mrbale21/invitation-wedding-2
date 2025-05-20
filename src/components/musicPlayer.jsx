@@ -18,7 +18,7 @@ const MusicPlayer = () => {
   };
 
   return (
-    <div className="fixed top-8 right-5 z-50">
+    <div className="fixed top-5 right-5 z-50">
       <audio ref={audioRef} autoPlay loop>
         <source src={musicSrc} type="audio/mp3" />
         Your browser does not support the audio element.

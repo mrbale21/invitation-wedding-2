@@ -34,7 +34,7 @@ const LoveStory = () => {
             alt="Zigzag"
             className="h-[350px] object-contain z-10"
           /> */}
-        <div className="text-center text-secondary">
+        <div className="text-center text-secondary z-30">
           <div
             data-aos="fade-left"
             data-aos-delay="300"
