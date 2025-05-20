@@ -1,7 +1,5 @@
 import { useRef, useState } from "react";
-import { FaItunesNote } from "react-icons/fa";
 import musicSrc from "../assets/music/music.mp3";
-import { TbMusicOff } from "react-icons/tb";
 import { MdMusicNote, MdMusicOff } from "react-icons/md";
 
 const MusicPlayer = () => {
@@ -9,6 +7,8 @@ const MusicPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(true);
 
   const toggleMusic = () => {
+    if (!audioRef.current) return;
+
     if (isPlaying) {
       audioRef.current.pause();
     } else {
@@ -18,7 +18,7 @@ const MusicPlayer = () => {
   };
 
   return (
-    <div className="fixed top-5 right-5 z-50">
+    <div className="fixed top-8 right-5 z-50">
       <audio ref={audioRef} autoPlay loop>
         <source src={musicSrc} type="audio/mp3" />
         Your browser does not support the audio element.
@@ -26,12 +26,12 @@ const MusicPlayer = () => {
 
       <button
         onClick={toggleMusic}
-        className="bg-white text-primary p-1 rounded-full shadow-lg hover:bg-primary hover:text-white transition"
+        className="bg-primary text-accent p-1 rounded-full shadow-lg hover:bg-primary hover:text-accent transition"
       >
         {isPlaying ? (
-          <MdMusicNote className="text-xl" />
+          <MdMusicNote className="text-2xl spin-slow" />
         ) : (
-          <MdMusicOff className="text-xl" />
+          <MdMusicOff className="text-2xl" />
         )}
       </button>
     </div>

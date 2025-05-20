@@ -86,3 +86,17 @@ body,
   animation: revealDown 6s ease-out forwards;
   -webkit-animation: revealDown 6s ease-out forwards;
 }
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-slow {
+  animation: spin-slow 7s linear infinite;
+  -webkit-animation: spin-slow 7s linear infinite;
+}

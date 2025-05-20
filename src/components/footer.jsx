@@ -1,5 +1,5 @@
 import { FaInstagram, FaWhatsapp } from "react-icons/fa6";
-import bgIntro from "../assets/image/bg-intro.webp";
+import bgIntro from "../assets/image/bg-first.webp";
 
 function Footer() {
   return (
@@ -9,7 +9,7 @@ function Footer() {
         className="relative w-full h-[520px] bg-top bg-no-repeat bg-cover flex items-end justify-center"
         style={{
           backgroundImage: `url(${bgIntro})`,
-          backgroundPosition: "center 20%",
+          backgroundPosition: "center 50%",
         }}
       >
         {/* Overlay gradient */}

@@ -1,5 +1,4 @@
 import zigzag1 from "../assets/image/zigzag1.png";
-import zigzag2 from "../assets/image/zigzag2.png";
 
 const LoveStory = () => {
   return (
@@ -18,7 +17,11 @@ const LoveStory = () => {
         </div>
 
         {/* Zigzag and content container */}
-        <div className="relative flex flex-col items-center pt-6">
+        <div
+          data-aos="fade-down"
+          data-aos-delay="800"
+          className="relative flex flex-col items-center pt-6"
+        >
           {/* Zigzag Image */}
           <img
             src={zigzag1}

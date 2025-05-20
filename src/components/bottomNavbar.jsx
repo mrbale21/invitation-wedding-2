@@ -3,6 +3,8 @@ import brideIcon from "../assets/icons/bride.png";
 import dateIcon from "../assets/icons/date.png";
 import wishIcon from "../assets/icons/wish.png";
 import giftIcon from "../assets/icons/gift.png";
+import galleryIcon from "../assets/icons/gallery.png";
+import storyIcon from "../assets/icons/story.png";
 
 const BottomNavbar = () => {
   const [activeSection, setActiveSection] = useState(""); // Untuk menyimpan section aktif
@@ -10,7 +12,7 @@ const BottomNavbar = () => {
 
   // Fungsi untuk mendeteksi posisi scroll dan mengubah activeSection
   const handleScroll = () => {
-    const sections = ["bride", "wedding", "wish", "gift"];
+    const sections = ["bride", "story", "wedding", "gallery", "wish"];
     let active = "";
 
     // Menentukan section yang aktif berdasarkan posisi scroll
@@ -53,39 +55,47 @@ const BottomNavbar = () => {
   };
 
   return (
-    <div className="fixed bottom-2 left-1/2 transform -translate-x-1/2 w-80 z-50 bg-soft-pearl text-white rounded-t-lg">
+    <div className="fixed bg-primary bottom-2 left-1/2 transform -translate-x-1/2 w-80 z-50 bg-soft-pearl text-white rounded-t-lg">
       <div className="flex justify-around items-center py-1">
         <button
           onClick={() => scrollToSection("bride")}
           className={
-            activeSection === "bride" ? "bg-primary p-1 px-4 rounded" : ""
+            activeSection === "bride" ? "bg-accent p-1 px-4 rounded" : ""
           }
         >
           <img src={brideIcon} alt="bride" className="h-5 w-5" />
         </button>
         <button
-          onClick={() => scrollToSection("wedding")}
+          onClick={() => scrollToSection("story")}
           className={
-            activeSection === "wedding" ? "bg-primary p-1 px-4 rounded" : ""
+            activeSection === "story" ? "bg-accent p-1 px-4 rounded" : ""
           }
         >
-          <img src={dateIcon} alt="wedding" className="h-5 w-5" />
+          <img src={storyIcon} alt="story" className="h-5 w-5" />
+        </button>
+        <button
+          onClick={() => scrollToSection("wedding")}
+          className={
+            activeSection === "wedding" ? "bg-accent p-1 px-4 rounded" : ""
+          }
+        >
+          <img src={dateIcon} alt="date" className="h-5 w-5" />
+        </button>
+        <button
+          onClick={() => scrollToSection("gallery")}
+          className={
+            activeSection === "gallery" ? "bg-accent p-1 px-4 rounded" : ""
+          }
+        >
+          <img src={galleryIcon} alt="gallery" className="h-5 w-5" />
         </button>
         <button
           onClick={() => scrollToSection("wish")}
           className={
-            activeSection === "wish" ? "bg-primary p-1 px-4 rounded" : ""
+            activeSection === "wish" ? "bg-accent p-1 px-4 rounded" : ""
           }
         >
           <img src={wishIcon} alt="wish" className="h-5 w-5" />
-        </button>
-        <button
-          onClick={() => scrollToSection("gift")}
-          className={
-            activeSection === "gift" ? "bg-primary p-1 px-4 rounded" : ""
-          }
-        >
-          <img src={giftIcon} alt="gift" className="h-5 w-5" />
         </button>
       </div>
     </div>

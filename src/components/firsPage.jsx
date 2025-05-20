@@ -11,15 +11,17 @@ import { motion } from "framer-motion";
 import SpecialDay from "./specialDay";
 import LoveStory from "./loveStory";
 import bg1 from "../assets/image/bg-first.webp";
-import bg2 from "../assets/image/bg-wedding.webp";
-import bg3 from "../assets/image/bg-story.webp";
+import bg2 from "../assets/image/bg-first-1.webp";
+import bg3 from "../assets/image/bg-first-2.webp";
+import bg4 from "../assets/image/bg-first-3.webp";
+import MusicPlayer from "./musicPlayer";
 
 // Lazy-load komponen berat
 const Galery = lazy(() => import("./galery"));
 const Gift = lazy(() => import("./gift"));
 const WishPage = lazy(() => import("./wish/wishPage"));
 
-const bgImages = [bg1, bg2, bg3];
+const bgImages = [bg1, bg2, bg3, bg4];
 
 function FirstPage() {
   const [currentBg, setCurrentBg] = useState(0);
@@ -49,7 +51,7 @@ function FirstPage() {
 
   return (
     <AnimatedPage>
-      <div className="min-h-screen w-full overflow-hidden bg-primary text-accent  p-0 m-0 border-none">
+      <div className="min-h-screen w-full overflow-hidden bg-[url(assets/image/bg.png)] bg-contain text-accent  p-0 m-0 border-none">
         <motion.div
           initial={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.95 }}
@@ -76,7 +78,7 @@ function FirstPage() {
               </h1>
               <h3
                 data-aos="fade-up"
-                className="font-breathing text-2xl font-medium text-neutral"
+                className="font-breathing text-2xl font-semibold text-primary"
               >
                 Ahmad & Navisa
               </h3>
@@ -99,7 +101,7 @@ function FirstPage() {
             <Arrum />
           </div>
 
-          <div id="lovestory" className="w-full">
+          <div id="story" className="w-full">
             <LoveStory />
           </div>
 
@@ -108,7 +110,7 @@ function FirstPage() {
           </div>
 
           {/* Lazy Components */}
-          <div id="galery" className="w-full">
+          <div id="gallery" className="w-full">
             <Suspense
               fallback={
                 <div className="text-center py-4">Memuat galeri...</div>
@@ -118,7 +120,7 @@ function FirstPage() {
             </Suspense>
           </div>
 
-          <div id="gift" className="w-full">
+          <div className="w-full">
             <Suspense
               fallback={<div className="text-center py-4">Memuat gift...</div>}
             >
@@ -139,6 +141,8 @@ function FirstPage() {
           <div className="w-full">
             <Footer />
           </div>
+
+          <MusicPlayer />
         </motion.div>
 
         <BottomNavbar onNavigate={scrollToSection} />
