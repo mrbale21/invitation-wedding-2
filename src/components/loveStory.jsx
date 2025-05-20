@@ -20,7 +20,7 @@ const LoveStory = () => {
         <div
           data-aos="fade-down"
           data-aos-delay="800"
-          className="relative flex flex-col items-center pt-6"
+          className="relative flex flex-col items-center pt-6  z-30"
         >
           {/* Zigzag Image */}
           <img
@@ -34,7 +34,7 @@ const LoveStory = () => {
             alt="Zigzag"
             className="h-[350px] object-contain z-10"
           /> */}
-        <div className="text-center text-secondary z-30">
+        <div className="text-center text-secondary">
           <div
             data-aos="fade-left"
             data-aos-delay="300"
