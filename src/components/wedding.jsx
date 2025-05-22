@@ -64,9 +64,12 @@ function Wedding() {
                   Kp. Tonggoh RT 01/01, Desa Gunung Sari, <br /> Kec. Citeureup,
                   Kab. Bogor
                 </p>
-                <button className="flex justify-center items-center text-sm font-cal-sans p-1 px-2 bg-primary text-accent hover:border rounded-lg gap-2 w-32 mt-4">
+                <a
+                  href="https://maps.app.goo.gl/FdrFH21QQnLxyNMZ9"
+                  className="flex justify-center items-center text-sm font-cal-sans p-1 px-2 bg-primary text-accent hover:border rounded-lg gap-2 w-32 mt-4"
+                >
                   <FaMapLocation /> <p>Open Map</p>
-                </button>
+                </a>
               </div>
             </div>
 
@@ -122,9 +125,12 @@ function Wedding() {
                   Kp. Hambalang Rt 08/03, Desa Hambalang, <br /> Kec. Citeureup,
                   Kab. Bogor
                 </p>
-                <button className="flex justify-center items-center text-sm font-cal-sans p-1 px-2 bg-primary text-accent hover:border rounded-sm gap-2 w-32 mt-4">
+                <a
+                  href="https://maps.app.goo.gl/irZbMBgDqhLghNck9"
+                  className="flex justify-center items-center text-sm font-cal-sans p-1 px-2 bg-primary text-accent hover:border rounded-sm gap-2 w-32 mt-4"
+                >
                   <FaMapLocation /> <p>Open Map</p>
-                </button>
+                </a>
               </div>
             </div>
           </div>

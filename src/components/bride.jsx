@@ -51,15 +51,19 @@ function Bride() {
                 className="text-center text-black text-[12px]"
               >
                 Putra bungsu dari Bapak Deden & <br />
-                Ibu Neneng
+                Ibu Eneng
               </p>
-              <button
+              <a
+                href="https://instagram.com/ahmdlae"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
                 data-aos="zoom-in"
                 className="text-xs font-semibold p-1 px-2 text-center bg-primary hover:border hover:border-black text-accent rounded-sm flex items-center gap-1 mt-4"
               >
                 <FaInstagram />
                 <p>Instagram</p>
-              </button>
+              </a>
             </div>
           </div>
         </div>

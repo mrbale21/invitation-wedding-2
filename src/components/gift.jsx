@@ -76,8 +76,11 @@ function Gift() {
                 show1 ? "animate-revealDown" : "opacity-0"
               }`}
             >
-              <div className="bg-accent border border-primary rounded-2xl shadow shadow-primary w-full">
-                <div className="flex justify-between text-secondary p-4 gap-10">
+              <div
+                data-aos="fade-down"
+                className="bg-accent border border-primary rounded-2xl shadow shadow-primary w-full"
+              >
+                <div className="flex justify-between text-secondary p-4 ">
                   <div className="grid justify-items-start py-6 pt-12">
                     {/* <h1 className="font-akaya-kanadaka font-semibold text-lg">
                     BCA
@@ -110,8 +113,11 @@ function Gift() {
                 </div>
               </div>
 
-              <div className="bg-accent border border-primary rounded-2xl shadow shadow-primary w-full">
-                <div className="flex justify-between text-secondary p-4 gap-10">
+              <div
+                data-aos="fade-down"
+                className="bg-accent border border-primary rounded-2xl shadow shadow-primary w-full"
+              >
+                <div className="flex justify-between text-secondary p-4 ">
                   <div className="grid justify-items-start py-6 pt-12">
                     {/* <h1 className="font-akaya-kanadaka font-semibold text-lg">
                     BCA
@@ -141,7 +147,10 @@ function Gift() {
                 </div>
               </div>
 
-              <div className="bg-accent border border-primary rounded-2xl shadow shadow-primary w-full">
+              <div
+                data-aos="fade-down"
+                className="bg-accent border border-primary rounded-2xl shadow shadow-primary w-full"
+              >
                 <div className="flex flex-col justify-center items-center text-primary p-4">
                   <FaGift />
                   <h2 className="font-raleway font-semibold pt-1 pb-3">
