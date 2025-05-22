@@ -37,12 +37,14 @@ function Wedding() {
                   JULI
                 </h1>
                 <div className="h-full w-0.5 bg-gray-400 mx-4" />
-                <div data-aos="zoom-out" className="flex flex-col px-4 gap-2">
-                  <h2 className="font-charm text-xl font-semibold">Minggu</h2>
+                <div data-aos="zoom-out" className="flex flex-col gap-2">
+                  <h2 className="font-charm text-xl font-semibold">Sabtu</h2>
                   <h1 className="font-cal-sans font-bold text-5xl text-primary">
-                    28
+                    5
                   </h1>
-                  <h5 className="font-cal-sans text-xs">09.000 WIB</h5>
+                  <h5 className="font-cal-sans text-xs">
+                    09.000 WIB - selesai
+                  </h5>
                 </div>
                 <div className="h-full w-0.5 bg-gray-400 mx-4" />
                 <h2
@@ -56,10 +58,10 @@ function Wedding() {
                 data-aos="fade-up"
                 className="font-cal-sans text-sm flex flex-col justify-center items-center"
               >
-                <h2>Alamat :</h2>
+                <h2>Tempat :</h2>
                 <p>Kediaman Mempelai Pria</p>
                 <p className="text-[10px]">
-                  Kp. Hambalang RT 08/03, Desa Hambalang, <br /> Kec. Citeureup,
+                  Kp. Tonggoh RT 01/01, Desa Gunung Sari, <br /> Kec. Citeureup,
                   Kab. Bogor
                 </p>
                 <button className="flex justify-center items-center text-sm font-cal-sans p-1 px-2 bg-primary text-accent hover:border rounded-lg gap-2 w-32 mt-4">
@@ -92,12 +94,14 @@ function Wedding() {
                   JULI
                 </h1>
                 <div className="h-full w-0.5 bg-gray-400 mx-4" />
-                <div data-aos="zoom-out" className="flex flex-col px-4 gap-2">
+                <div data-aos="zoom-out" className="flex flex-col gap-2">
                   <h2 className="font-charm text-xl font-semibold">Minggu</h2>
                   <h1 className="font-cal-sans font-bold text-5xl text-primary">
-                    28
+                    6
                   </h1>
-                  <h5 className="font-cal-sans text-xs">09.000 WIB</h5>
+                  <h5 className="font-cal-sans text-xs">
+                    09.000 WIB - selesai
+                  </h5>
                 </div>
                 <div className="h-full w-0.5 bg-gray-400 mx-4" />
                 <h2
@@ -111,11 +115,12 @@ function Wedding() {
                 data-aos="zoom-out"
                 className="font-cal-sans text-sm flex flex-col justify-center items-center"
               >
-                <h2>Alamat :</h2>
+                <h2>Tempat :</h2>
 
                 <p>Kediaman Mempelai Wanita</p>
                 <p className="text-[10px]">
-                  CR8V+W9J Cadas Ngampar, Kabupaten Bogor
+                  Kp. Hambalang Rt 08/03, Desa Hambalang, <br /> Kec. Citeureup,
+                  Kab. Bogor
                 </p>
                 <button className="flex justify-center items-center text-sm font-cal-sans p-1 px-2 bg-primary text-accent hover:border rounded-sm gap-2 w-32 mt-4">
                   <FaMapLocation /> <p>Open Map</p>

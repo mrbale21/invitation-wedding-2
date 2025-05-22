@@ -1,5 +1,5 @@
 import { FaInstagram, FaWhatsapp } from "react-icons/fa6";
-import bgIntro from "../assets/image/bg-first.webp";
+import bgIntro from "../assets/image/bg-footer.webp";
 
 function Footer() {
   return (
@@ -21,7 +21,7 @@ function Footer() {
             data-aos="fade-up"
             className="font-breathing text-2xl font-medium text-accent"
           >
-            Ilham & Syarifah
+            Ahmad & Navisa
           </h3>
           <h5
             data-aos="fade-up"

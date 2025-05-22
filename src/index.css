@@ -83,8 +83,8 @@ body,
 }
 
 .animate-revealDown {
-  animation: revealDown 6s ease-out forwards;
-  -webkit-animation: revealDown 6s ease-out forwards;
+  animation: revealDown 3s ease-out forwards;
+  -webkit-animation: revealDown 3s ease-out forwards;
 }
 
 @keyframes spin-slow {
