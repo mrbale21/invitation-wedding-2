@@ -14,6 +14,8 @@ import bg1 from "../assets/image/bg-first.webp";
 import bg2 from "../assets/image/bg-first-1.webp";
 import bg3 from "../assets/image/bg-first-2.webp";
 import bg4 from "../assets/image/bg-first-3.webp";
+import bg5 from "../assets/image/bg-intro1.webp";
+import bg6 from "../assets/image/bg-footer.webp";
 import MusicPlayer from "./musicPlayer";
 
 // Lazy-load komponen berat
@@ -21,7 +23,7 @@ const Galery = lazy(() => import("./galery"));
 const Gift = lazy(() => import("./gift"));
 const WishPage = lazy(() => import("./wish/wishPage"));
 
-const bgImages = [bg1, bg2, bg3, bg4];
+const bgImages = [bg1, bg2, bg3, bg4, bg5, bg6];
 
 function FirstPage() {
   const [currentBg, setCurrentBg] = useState(0);
