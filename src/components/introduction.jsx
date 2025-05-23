@@ -36,7 +36,7 @@ function Introduction() {
             </div>
             <div className="z-10 grid place-items-center font-cal-sans gap-2">
               <h4 className="text-sm">Dear,</h4>
-              <h3 className=" font-raleway mb-4 text-neutral text-lg font-semibold">
+              <h3 className=" font-raleway mb-4 text-neutral text-md font-semibold">
                 {name ? name : "Muhamad Ikbal"}
               </h3>
               <p className="font-akaya-kanadaka text-center text-xs pt-10">

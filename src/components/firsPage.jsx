@@ -53,7 +53,7 @@ function FirstPage() {
 
   return (
     <AnimatedPage>
-      <div className="min-h-screen w-full overflow-hidden bg-[url(assets/image/bg.png)] bg-contain text-accent  p-0 m-0 border-none">
+      <div className="min-h-screen w-full overflow-hidden bg-[url(assets/image/bg.png)] bg-contain text-accent">
         <motion.div
           initial={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.95 }}

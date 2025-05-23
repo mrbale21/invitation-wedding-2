@@ -49,7 +49,7 @@ function Footer() {
             Design by Iqbaal_bel
           </h5>
           <div data-aos="fade-up" className="flex gap-3 text-lg">
-            <a
+            {/* <a
               href="https://wa.me/6285719894601"
               target="_blank"
               rel="noopener noreferrer"
@@ -57,7 +57,7 @@ function Footer() {
               aria-label="WhatsApp"
             >
               <FaWhatsapp />
-            </a>
+            </a> */}
             <a
               href="https://instagram.com/iqbaal_bel"
               target="_blank"

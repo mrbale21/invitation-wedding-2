@@ -72,7 +72,7 @@ function Gift() {
             {/* Gift Card Box */}
 
             <div
-              className={`-mt-4 bg-accent w-full pb-8 pt-4 px-10 flex flex-col items-center gap-6 rounded-b-md shadow shadow-primary ${
+              className={`-mt-4 bg-accent w-full pb-8 pt-4 px-4 flex flex-col items-center gap-6 rounded-b-md shadow shadow-primary ${
                 show1 ? "animate-revealDown" : "opacity-0"
               }`}
             >
