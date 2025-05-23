@@ -3,7 +3,7 @@ import { FaMapLocation } from "react-icons/fa6";
 function Wedding() {
   return (
     <>
-      <div className=" min-h-screen w-full pt-18 pb-8 bg-[url(assets/image/bg-wedding.webp)] bg-fixed bg-cover bg-no-repeat bg-center text-secondary">
+      <div className=" min-h-screen w-full pt-18 pb-8 bg-[url(assets/image/bg-wedding.webp)] bg-fixed sm:bg-contain bg-cover bg-center text-secondary">
         <div className="pt-2 px-4">
           <div className="min-w-full h-[820px] bg-accent shadow shadow-black border border-secondary rounded-t-full grid place-items-center pb-2">
             {/* respsei */}
@@ -126,7 +126,7 @@ function Wedding() {
                   Kab. Bogor
                 </p>
                 <a
-                  href="https://maps.app.goo.gl/irZbMBgDqhLghNck9"
+                  href="https://maps.app.goo.gl/85ci29yCuyNB9eF59"
                   className="flex justify-center items-center text-sm font-cal-sans p-1 px-2 bg-primary text-accent hover:border rounded-sm gap-2 w-32 mt-4"
                 >
                   <FaMapLocation /> <p>Open Map</p>
