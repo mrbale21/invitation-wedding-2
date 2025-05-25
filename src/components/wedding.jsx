@@ -62,7 +62,7 @@ function Wedding() {
                 <p>Kediaman Mempelai Pria</p>
                 <p className="text-[10px]">
                   Kp. Tonggoh RT 01/01, Desa Gunung Sari, <br /> Kec. Citeureup,
-                  Kab. Bogor
+                  Kab. Bogor.
                 </p>
                 <a
                   href="https://maps.app.goo.gl/FdrFH21QQnLxyNMZ9"
@@ -123,7 +123,7 @@ function Wedding() {
                 <p>Kediaman Mempelai Wanita</p>
                 <p className="text-[10px]">
                   Kp. Hambalang Rt 08/03, Desa Hambalang, <br /> Kec. Citeureup,
-                  Kab. Bogor
+                  Kab. Bogor.
                 </p>
                 <a
                   href="https://maps.app.goo.gl/85ci29yCuyNB9eF59"

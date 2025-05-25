@@ -13,13 +13,6 @@ function Gift() {
     });
   };
 
-  const handleCopy2 = () => {
-    navigator.clipboard.writeText(nodana).then(() => {
-      setCopied2(true);
-      setTimeout(() => setCopied2(false), 2000); // Reset indikator setelah 2 detik
-    });
-  };
-
   return (
     <>
       <div className="p-4 py-10 bg-secondary hide-scrollbar w-full m-0 border-none">
@@ -77,7 +70,6 @@ function Gift() {
             </div>
           </div>
         </div>
-        {/* Card untuk Kirim Hadiah */}
       </div>
     </>
   );
