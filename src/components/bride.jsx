@@ -3,7 +3,7 @@ import { FaInstagram } from "react-icons/fa6";
 function Bride() {
   return (
     <>
-      <div className="h-[950px] w-full max-w-md bg-accent">
+      <div className="h-[1000px] w-full max-w-md bg-accent">
         {/* Mempelai Pria */}
         <div
           data-aos="zoom-in"
