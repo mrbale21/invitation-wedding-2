@@ -26,7 +26,7 @@ function Wedding() {
                 data-aos="zoom-out"
                 className="font-sacramento text-3xl font-semibold text-primary pt-6"
               >
-                Resepsi Pernikahan
+                Resepsi
               </h1>
 
               <div className="flex justify-center items-center h-28 my-4">
@@ -86,7 +86,7 @@ function Wedding() {
                 data-aos="zoom-out"
                 className="font-sacramento text-3xl font-semibold text-primary"
               >
-                Akad Nikah
+                Akad Nikah & Resepsi
               </h1>
 
               <div className="flex justify-center items-center h-28 my-4">
