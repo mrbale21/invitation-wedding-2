@@ -35,7 +35,8 @@ function Gift() {
             semakin melengkapi kebahagiaan kami.
           </div>
           <div
-            // data-aos="fade-down"
+            data-aos="zoom-in"
+            data-aos-delay="200"
             className="bg-accent border border-primary rounded-2xl shadow shadow-primary w-4/5"
           >
             <div className="flex flex-col justify-center items-center gap-2 text-secondary p-4 ">
