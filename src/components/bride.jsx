@@ -13,10 +13,12 @@ function Bride() {
           <h2 className="font-sacramento font-semibold text-2xl text-primary">
             Assalamualaikum Wr. Wb
           </h2>
-          <p className="text-xs max-w-prose text-primary z-10 text-center mt-2">
-            Dengan memohon Rahmat dan Ridho Allah SWT yang telah <br />
-            menciptakan makhluk-Nya secara berpasang-pasangan <br />
-            Kami bermaksud menyelenggarakan pernikahan kami
+          <p className="text-xs max-w-prose text-primary z-10 text-center mt-2 px-6">
+            Dengan memohon Rahmat dan Ridho Allah SWT yang telah menciptakan
+            mahluk-Nya berpasang-pasangan. Ya Allah, perkenankanlah kami
+            merangkaikan kasih sayang yang Kau ciptakan diantara kami untuk
+            mengikuti Sunnah Rasul-Mu dalam rangka membentuk keluarga yang
+            sakinah, mawaddah, warahmah.
           </p>
         </div>
         <div className="relative z-10 flex justify-center pt-6">
