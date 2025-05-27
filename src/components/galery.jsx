@@ -9,15 +9,22 @@ const images = [
   "gallery-6.webp",
   "gallery-7.webp",
   "gallery-8.webp",
+  "gallery-9.webp",
+  "gallery-10.webp",
+  "gallery-11.webp",
+  "gallery-12.webp",
+  "gallery-13.webp",
+  "gallery-14.webp",
+  "gallery-15.webp",
 ];
 
 const Gallery = () => {
-  // 5 gambar aktif (index gambar di array images)
   const [indexes, setIndexes] = useState([0, 1, 2, 3, 4]);
-  // status fade true = visible, false = transparan
   const [fadeStates, setFadeStates] = useState([true, true, true, true, true]);
 
-  // Cari index random yang beda dari excludeIndex
+  const [showModal, setShowModal] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const getRandomIndex = (excludeIndex) => {
     let rand;
     do {
@@ -28,50 +35,43 @@ const Gallery = () => {
 
   useEffect(() => {
     let isMounted = true;
-
     const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
     const runCycle = async () => {
       while (isMounted) {
         for (let i = 0; i < 5; i++) {
-          // fade out gambar ke-i
           setFadeStates((prev) => {
             const updated = [...prev];
             updated[i] = false;
             return updated;
           });
 
-          await delay(700); // sesuai durasi transition-opacity di CSS
+          await delay(700);
 
-          // update index gambar ke-i
           setIndexes((prev) => {
             const updated = [...prev];
             updated[i] = getRandomIndex(prev[i]);
             return updated;
           });
 
-          // fade in gambar ke-i
           setFadeStates((prev) => {
             const updated = [...prev];
             updated[i] = true;
             return updated;
           });
 
-          await delay(600); // jeda antar perubahan gambar
+          await delay(600);
         }
-
-        await delay(1000); // jeda siklus ulang
+        await delay(1000);
       }
     };
 
     runCycle();
-
     return () => {
       isMounted = false;
     };
   }, []);
 
-  // Fungsi render image biar tidak duplikat kode
   const renderImage = (index, alt, className, fade) => (
     <img
       src={`assets/image/${images[index]}`}
@@ -84,6 +84,14 @@ const Gallery = () => {
     />
   );
 
+  const prevImage = () => {
+    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const nextImage = () => {
+    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
   return (
     <div className="p-4 space-y-6 max-w-screen-md mx-auto">
       <h1
@@ -94,8 +102,14 @@ const Gallery = () => {
       </h1>
 
       <div className="grid grid-cols-1 gap-4 pb-8">
-        {/* Kolom Kiri */}
-        <div>
+        {/* Gambar Besar (klik untuk buka modal) */}
+        <div
+          onClick={() => {
+            setShowModal(true);
+            setCurrentIndex(indexes[0]);
+          }}
+          className="cursor-pointer"
+        >
           {renderImage(
             indexes[0],
             "Gallery Image 1",
@@ -104,8 +118,14 @@ const Gallery = () => {
           )}
         </div>
 
-        {/* Kolom Kanan Baris 1 */}
-        <div className="grid grid-cols-2 gap-4">
+        {/* Gambar Kanan Baris 1 */}
+        <div
+          onClick={() => {
+            setShowModal(true);
+            setCurrentIndex(indexes[0]);
+          }}
+          className="grid grid-cols-2 gap-4 cursor-pointer"
+        >
           {renderImage(
             indexes[1],
             "Gallery Image 2",
@@ -120,8 +140,14 @@ const Gallery = () => {
           )}
         </div>
 
-        {/* Kolom Kanan Baris 2 */}
-        <div className="grid grid-cols-2 gap-4">
+        {/* Gambar Kanan Baris 2 */}
+        <div
+          onClick={() => {
+            setShowModal(true);
+            setCurrentIndex(indexes[0]);
+          }}
+          className="grid grid-cols-2 gap-4 cursor-pointer"
+        >
           {renderImage(
             indexes[3],
             "Gallery Image 4",
@@ -136,6 +162,50 @@ const Gallery = () => {
           )}
         </div>
       </div>
+
+      {/* Modal Viewer */}
+      {showModal && (
+        <div
+          className="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center"
+          onClick={() => setShowModal(false)} // klik di luar menutup
+        >
+          <div
+            className="relative flex items-center justify-center"
+            onClick={(e) => e.stopPropagation()} // klik gambar tidak menutup
+          >
+            {/* Tombol Tutup */}
+            <button
+              className="absolute top-0 right-8 text-white/80 text-4xl font-bold"
+              onClick={() => setShowModal(false)}
+            >
+              ×
+            </button>
+
+            {/* Tombol Kiri */}
+            <button
+              onClick={prevImage}
+              className="absolute left-6 text-white/80 text-5xl font-bold bg-black/10 bg-opacity-50 rounded-full p-2"
+            >
+              ‹
+            </button>
+
+            {/* Gambar Aktif */}
+            <img
+              src={`assets/image/${images[currentIndex]}`}
+              alt={`Gallery ${currentIndex + 1}`}
+              className="max-w-[90%] max-h-[80%] object-contain rounded-xl shadow-xl"
+            />
+
+            {/* Tombol Kanan */}
+            <button
+              onClick={nextImage}
+              className="absolute right-6 text-white/80 text-5xl font-bold bg-black/10 bg-opacity-50 rounded-full p-2"
+            >
+              ›
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
